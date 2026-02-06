@@ -17,4 +17,4 @@ pydub
 
 langchain-groq
 streamlit-audiorecorder
-pyaudioop
+
