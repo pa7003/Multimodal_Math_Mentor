@@ -16,6 +16,7 @@ try:
     from utils.audio import AudioProcessor
     from agents.parser import ParserAgent
     from agents.router import IntentRouter
+    from agents.solver import SolverAgent
     from agents.verifier import VerifierAgent
     from agents.explainer import ExplainerAgent
 except ImportError as e:
