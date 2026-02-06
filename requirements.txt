@@ -1,4 +1,4 @@
-streamlit
+streamlit>=1.40.0
 langchain
 langchain-community
 langchain-core
@@ -16,5 +16,4 @@ openai-whisper
 pydub
 
 langchain-groq
-streamlit-audiorecorder
 

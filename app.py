@@ -16,10 +16,8 @@ try:
     from utils.audio import AudioProcessor
     from agents.parser import ParserAgent
     from agents.router import IntentRouter
-    from agents.solver import SolverAgent
     from agents.verifier import VerifierAgent
     from agents.explainer import ExplainerAgent
-    from audiorecorder import audiorecorder
 except ImportError as e:
     st.error(f"Import Error: {e}")
     st.stop()
@@ -257,18 +255,18 @@ elif input_mode == "Audio":
                         st.rerun()
 
     with tab_record:
-        st.write("Click the microphone to start recording:")
-        audio = audiorecorder("Click to record", "Recording...")
+        st.write("Click to record audio:")
+        audio_value = st.audio_input("Record")
         
-        if len(audio) > 0:
+        if audio_value:
             # Playback
-            st.audio(audio.export().read())
+            st.audio(audio_value)
             
             if st.button("Transcribe Recording"):
                 with st.spinner("Transcribing..."):
                     audio_proc = get_audio_processor()
                     # Export to bytes
-                    audio_bytes = audio.export().read()
+                    audio_bytes = audio_value.getvalue()
                     result = audio_proc.process_audio(audio_bytes)
                     if result.get("error"):
                         st.error(f"ASR Error: {result['error']}")
