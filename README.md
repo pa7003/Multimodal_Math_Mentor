@@ -1,89 +1,44 @@
 # Multimodal Math Mentor
 
 ## Overview
-Multimodal Math Mentor is an educational tool designed to help students comprehend mathematical concepts through various modalities, including text, audio, and visual representations. The system leverages advanced algorithms to provide personalized learning experiences.
+The Multimodal Math Mentor is an innovative application designed to assist learners in mastering mathematical concepts through various modalities. Leveraging advanced technologies, this application integrates a Streamlit UI, LangChain agents, Optical Character Recognition (OCR), audio processing, Retrieval-Augmented Generation (RAG), and multiple Large Language Model (LLM) providers.
 
 ## Features
-- Interactive learning modules
-- Support for multiple languages and modalities
-- Real-time feedback for students
-- Integration with various learning management systems
+- **Streamlit UI**: A user-friendly interface developed using Streamlit, allowing users to easily interact with the application's capabilities.
+- **LangChain Agents**: The app utilizes LangChain to enable dynamic interactions and facilitate complex workflows involving multiple data sources.
+- **OCR Processing**: Recognizes and processes written mathematical problems from images, converting them into digital format for analysis and solution.
+- **Audio Processing**: Supports voice input to allow users to verbally communicate their queries and receive spoken feedback.
+- **RAG**: Retrieval-Augmented Generation enhances the quality of responses by using external databases to inform its answers based on real-time data retrieval.
+- **Multiple LLM Providers**: Leverages different LLM providers to ensure users receive accurate and contextually relevant responses regardless of query complexity.
 
-## System Architecture
-The system is built on a microservices architecture, allowing for scalability and easy maintenance. Key components include:
-- Frontend UI: Built using React.js
-- Backend API: Node.js with Express
-- Database: MongoDB for storing user data and learning materials
-
-## Prerequisites
-- Node.js (version 14 or higher)
-- MongoDB (version 4.0 or higher)
-- Git
-
-## Installation
-1. Clone the repository:
+## Setup Instructions
+To set up the Multimodal Math Mentor, follow these steps:
+1. **Clone the Repository**:  
    ```bash
    git clone https://github.com/pa7003/Multimodal_Math_Mentor.git
    cd Multimodal_Math_Mentor
    ```
-2. Install dependencies:
+
+2. **Install Dependencies**:  
+   Ensure you have Python installed. Then, use pip to install the required packages:
    ```bash
-   npm install
+   pip install -r requirements.txt
    ```
-3. Set up the database and environment variables as specified in the configuration section.
 
-## Configuration
-Create a `.env` file in the root directory and add the following variables:
-- `MONGODB_URI=<your_mongodb_uri>`
-- `PORT=3000`
-- `API_KEY=<your_api_key>`
+3. **Set Up Environment Variables**:  
+   Create a `.env` file in the root directory and add the necessary configuration variables as indicated in the provided `.env.example` file.
 
-## Usage
-To start the application, run:
-```bash
-npm start
-```
-Open a web browser and navigate to `http://localhost:3000` to access the application.
+4. **Run the Application**:  
+   Start the Streamlit application with the following command:
+   ```bash
+   streamlit run app.py
+   ```
 
-## Project Structure
-```
-Multimodal_Math_Mentor/
-├── client/        # Frontend code
-├── server/        # Backend code
-├── .env           # Environment configuration
-├── README.md      # Project documentation
-```
+5. **Access the UI**:  
+   Open your web browser and go to `http://localhost:8501` to use the application.
 
-## Core Components
-1. **User Authentication**: Secure login and registration.
-2. **Learning Modules**: Different sections for various mathematical topics.
-3. **Feedback System**: Mechanism to provide users with insights into their performance.
-
-## API Keys Setup
-Ensure you have your API keys ready and included in the `.env` file as mentioned in the configuration section.
-
-## Supported LLM Providers
-- OpenAI
-- Google Cloud AI
-- IBM Watson
-
-## Architecture Workflow
-1. User interacts with the frontend.
-2. Requests are made to the backend API.
-3. Data is processed and sent back to the frontend for user feedback.
-
-## Contributing Guidelines
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeatureName`).
-3. Make your changes and commit them (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeatureName`).
-5. Open a pull request.
+## Contributions
+We welcome contributions from the community. Please fork the repository and submit a pull request with your changes. Make sure to follow the code of conduct and contribution guidelines.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Troubleshooting
-If you encounter issues, please check the following:
-- Ensure all prerequisites are installed.
-- Verify that your environment variables are correctly set in the `.env` file.
-- Check the logs for any errors and troubleshoot accordingly.
+This project is licensed under the MIT License. See the LICENSE file for more details.
